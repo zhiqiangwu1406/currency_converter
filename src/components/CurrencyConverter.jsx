@@ -57,8 +57,8 @@ function CurrencyConverter() {
           {!loading && !error && convertedValue === null && (
             <p>Click to convert ...</p>
           )}
-          {loading && <p>Loading...</p>}
-          {error && <p>{error}</p>}
+          {loading && !error && <p>Loading...</p>}
+          {error && <p>API error</p>}
           {!loading && !error && convertedValue !== null && (
             <p>
               {amount} {fromCurrency} ={" "}
