@@ -13,6 +13,7 @@ const useCurrencyRate = (fromCurrency) => {
         );
         const data = await fetchRates.json();
         setRates(data[fromCurrency]);
+        setError(null);
       } catch (err) {
         console.log(err);
         setError(err);
