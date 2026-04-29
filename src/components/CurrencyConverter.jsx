@@ -54,7 +54,9 @@ function CurrencyConverter() {
           </button>
         </div>
         <div className="mt-4 font-semibold text-xl text-center">
-          {convertedValue === null && <p>Click to convert ...</p>}
+          {!loading && !error && convertedValue === null && (
+            <p>Click to convert ...</p>
+          )}
           {loading && <p>Loading...</p>}
           {error && <p>{error}</p>}
           {!loading && !error && convertedValue !== null && (
